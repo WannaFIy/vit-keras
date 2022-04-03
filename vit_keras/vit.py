@@ -98,7 +98,7 @@ def build_model(
     assert (image_size_tuple[0] % patch_size == 0) and (
         image_size_tuple[1] % patch_size == 0
     ), "image_size must be a multiple of patch_size"
-    x = tf.keras.layers.Input(shape=(image_size_tuple[0], image_size_tuple[1], 3))
+    x = tf.keras.layers.Input(shape=(image_size_tuple[0], image_size_tuple[1], 6))
     y = tf.keras.layers.Conv2D(
         filters=hidden_size,
         kernel_size=patch_size,
